@@ -9,6 +9,7 @@ import zmq
 
 context = zmq.Context()
 socket = context.socket(zmq.REP)
+#   Sending messages on this port
 socket.bind("tcp://*:5555")
 while True:
     #  Wait for next request from client
